@@ -49,15 +49,17 @@
 
         function displaySongs(filteredSongs) {
             $('#songs-list').empty();
-            filteredSongs.forEach(function(song, index) {
+            filteredSongs.forEach(function(song, filteredIndex) {
+                const originalIndex = songs.findIndex(s => s.song === song.song && s.artist === song.artist);
                 const songItem = `
                     <div class="song-item">
-                        <div class="song-name" data-index="${index}">${song.song} - ${song.artist}</div>
+                        <div class="song-name" data-index="${originalIndex}">${song.song} - ${song.artist}</div>
                     </div>
                 `;
                 $('#songs-list').append(songItem);
             });
         }
+
         displaySongs(songs);
 
         $('#searchArtist, #searchSong').on('input', function() {
@@ -91,7 +93,7 @@
                     <div class="song-details">
                         <div class="names">
                             <p><strong>歌手:</strong><br class="sp_only"> ${song.artist}</p>
-                            <p><strong>投稿日:</strong><br class="sp_only"> ${song.uploadDate}</p>
+                            <p><strong>初投稿日:</strong><br class="sp_only"> ${song.uploadDate}</p>
                         </div>
                         ${iframeHtml}
                     </div>

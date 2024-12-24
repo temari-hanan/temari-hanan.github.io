@@ -160,6 +160,10 @@ body {
     .song-details{
         display: block;
     }
+
+    .song-details .names{
+        width: 100%;
+    }
 }
 
 #backToTop {
