@@ -251,7 +251,7 @@ function initSongs() {
         {artist: '米津玄師',song: '春雷',youtubeLinks: ['https://www.youtube.com/embed/7SPpO1RkmxU?start=4306',],uploadDate: '2023/05/19'},
         {artist: "u's - ラブライブ",song: '純愛レンズ',youtubeLinks: ['https://www.youtube.com/embed/urwa-ef1KOw?start=4897',],uploadDate: '2024/03/27'},
         {artist: 'ゴールデンボンバー',song: '女々しくて',youtubeLinks: ['https://www.youtube.com/embed/NOirh8vHd2I?start=4485',],uploadDate: '2024/01/29'},
-        {artist: 'Ado',song: '唱',youtubeLinks: ['https://www.youtube.com/embed/kgRYm7SUMqM?start=6755','https://www.youtube.com/embed/ROxeYUG6J8A?start=1620','https://www.youtube.com/embed/Lh2rxl1lWyI?start=7337',],uploadDate: '2023/10/05'},
+        {artist: 'Ado',song: '唱',youtubeLinks: ['https://www.youtube.com/embed/kgRYm7SUMqM?start=3155','https://www.youtube.com/embed/ROxeYUG6J8A?start=1620','https://www.youtube.com/embed/Lh2rxl1lWyI?start=7337',],uploadDate: '2023/10/05'},
         {artist: 'ボカロ',song: '少女レイ',youtubeLinks: ['https://www.youtube.com/embed/BPTPA6mBPOM?start=762','https://www.youtube.com/embed/itTI_e9fSPY?start=3573','https://www.youtube.com/embed/BUDtEGiLhMw?start=640',],uploadDate: '2023/07/13'},
         {artist: '井上陽水',song: '少年時代',youtubeLinks: ['https://www.youtube.com/embed/BPTPA6mBPOM?start=2134',],uploadDate: '2023/07/13'},
         {artist: "u's - ラブライブ",song: '硝子の花園',youtubeLinks: ['https://www.youtube.com/embed/Sy04TSlMgs8?start=2957',],uploadDate: '2024/04/03'},
