@@ -97,6 +97,7 @@ body {
     color: darkred;
     cursor: pointer;
     margin-bottom: 10px;
+    position: relative;
 }
 .song-name:hover {
     text-decoration: underline;
@@ -182,4 +183,20 @@ body {
     z-index: 1000;
     text-align: center;
     line-height: 60px;
+}
+
+.song-title {
+    display: inline-block;
+}
+
+.song-title::after {
+    content: "▲";
+    position: absolute;
+    font-size: 16px;
+    padding-left: 12px;
+    transition: transform 0.3s ease;
+}
+
+.song-name.open .song-title::after {
+    content: "▼";
 }

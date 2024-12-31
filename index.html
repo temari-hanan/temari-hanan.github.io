@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>手毬はなんの歌ったリスト</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="resource.css?v=1.0.1" rel="stylesheet">
+    <link href="resource.css?v=1.0.2" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="resource.js?v=1.0.1"></script>
 </head>
@@ -53,7 +53,9 @@
                 const originalIndex = songs.findIndex(s => s.song === song.song && s.artist === song.artist);
                 const songItem = `
                     <div class="song-item">
-                        <div class="song-name" data-index="${originalIndex}">${song.song} - ${song.artist}</div>
+                        <div class="song-name" data-index="${originalIndex}">
+                            <span class="song-title">${song.song} - ${song.artist}</span>
+                        </div>
                     </div>
                 `;
                 $('#songs-list').append(songItem);
@@ -102,6 +104,8 @@
             } else {
                 songDetails.toggle();
             }
+
+            $(this).toggleClass('open');
         });
 
         $(window).scroll(function() {
