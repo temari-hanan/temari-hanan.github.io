@@ -198,5 +198,5 @@ body {
 }
 
 .song-name.open .song-title::after {
-    content: "▼";
+    content: "▽";
 }
