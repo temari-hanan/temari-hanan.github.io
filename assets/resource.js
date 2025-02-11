@@ -1,7 +1,7 @@
 // それぞれの名前にシングルかダブルクォートがあれば調整すること
 function initSongs() {
     return [
-        {artist: 'ボカロ',song: '1925',youtubeLinks: ['https://www.youtube.com/embed/HejWiGIA2rQ?start=4815',],uploadDate: '2024/04/23'},
+        {artist: 'ボカロ',song: '1925',youtubeLinks: ['https://www.youtube.com/embed/HejWiGIA2rQ?start=4815&end=5008',],uploadDate: '2024/04/23'},
         {artist: '宝鐘マリン - Vtuber',song: 'Ahoy!! 我ら宝鐘海賊団☆',youtubeLinks: ['https://www.youtube.com/embed/ZvC5W5wPHAM?start=2496','https://www.youtube.com/embed/dHWhaC2nexg?start=6513','https://www.youtube.com/embed/HejWiGIA2rQ?start=4815',],uploadDate: '2024/07/23'},
         {artist: '東方',song: 'Bad Apple!!',youtubeLinks: ['https://www.youtube.com/embed/ZvC5W5wPHAM?start=1735',],uploadDate: '2024/07/23'},
         {artist: 'Creepy Nuts - マッシュル',song: 'Bling-Bang-Bang-Born',youtubeLinks: ['https://www.youtube.com/embed/ROxeYUG6J8A?start=351','https://www.youtube.com/embed/0SpDxwXYsEM?start=7659','https://www.youtube.com/embed/2FSuC3sF7AY?start=874',],uploadDate: '2024/03/04'},
