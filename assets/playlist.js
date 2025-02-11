@@ -213,7 +213,7 @@ $(document).ready(function() {
   });
 
   // 【追加】「リセット」ボタン：チェック済みの選択を全解除
-  $('#resetSelections').click(function(){
+  $('.resetSelections').click(function(){
     selectedSongsIndices = [];
     sessionStorage.setItem("selectedSongs", JSON.stringify(selectedSongsIndices));
     renderSongList();
