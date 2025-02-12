@@ -17,16 +17,16 @@ var playedShuffleIndices = []; // シャッフル再生時に既に再生した�
 
 // チェック状態（選択済み曲）の保存（availableSongs の index を保持）
 // localStorage からデータを取得。存在しない場合は空配列を初期値とする
-var selectedSongsIndices = JSON.parse(localStorage.getItem("selectedSongs") || "[]");
+var selectedSongsIndices = JSON.parse(localStorage.getItem("hanan-selectedSongs") || "[]");
 
 /*********************************************
  * 保存済み再生リストの管理
  *********************************************/
 function getSavedPlaylists() {
-  return JSON.parse(localStorage.getItem("savedPlaylists") || "[]");
+  return JSON.parse(localStorage.getItem("hanan-savedPlaylists") || "[]");
 }
 function setSavedPlaylists(playlists) {
-  localStorage.setItem("savedPlaylists", JSON.stringify(playlists));
+  localStorage.setItem("hanan-savedPlaylists", JSON.stringify(playlists));
 }
 function updateSavedPlaylistsSelect() {
   var saved = getSavedPlaylists();
@@ -91,7 +91,7 @@ function renderSongList() {
         selectedSongsIndices = selectedSongsIndices.filter(function(i){ return i !== idx; });
       }
       // 変更後の配列を localStorage に保存
-      localStorage.setItem("selectedSongs", JSON.stringify(selectedSongsIndices));
+      localStorage.setItem("hanan-selectedSongs", JSON.stringify(selectedSongsIndices));
     });
     var $label = $('<label for="' + checkboxId + '"> ' + song.song + ' - ' + song.artist + '</label>');
     $item.append($checkbox).append($label);
@@ -169,7 +169,7 @@ $(document).ready(function() {
     var pl = saved.find(function(p){ return p.name === selectedName; });
     if (pl) {
       selectedSongsIndices = pl.songs;
-      localStorage.setItem("selectedSongs", JSON.stringify(selectedSongsIndices));
+      localStorage.setItem("hanan-selectedSongs", JSON.stringify(selectedSongsIndices));
       renderSongList();
       // チェック状態更新後、再生開始イベントを発火
       $('#startPlaylist').click();
@@ -221,7 +221,7 @@ $(document).ready(function() {
   // 【追加】「リセット」ボタン：チェック済みの選択を全解除
   $('.resetSelections').click(function(){
     selectedSongsIndices = [];
-    localStorage.setItem("selectedSongs", JSON.stringify(selectedSongsIndices));
+    localStorage.setItem("hanan-selectedSongs", JSON.stringify(selectedSongsIndices));
     renderSongList();
   });
 });
