@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ぬぅまる配信予報</title>
+    <link rel="stylesheet" href="assets/numaru_common.css">
+    <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+    <script src="assets/numaru_app.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <img
+            src="https://placehold.jp/120x120.png"
+            alt="icon"
+            class="channel-icon"
+        >
+
+        <div>
+            <h1>ぬぅまる配信予報</h1>
+
+            <p class="sub-title">
+                過去の配信傾向から予測する非公式予報サイト
+            </p>
+        </div>
+    </header>
+
+    <section class="card forecast-card">
+        <div class="today-forecast"></div>
+
+        <div class="tomorrow-forecast"></div>
+    </section>
+
+    <section class="card twitter-card">
+        <h2>最新ツイート</h2>
+
+        <div class="twitter-embed">
+            <a class="twitter-timeline" href="https://publish.x.com/?maxheight=720&maxwidth=300&query=https%3A%2F%2Fx.com%2FNumaru__&widget=Timeline">Posts by Numaru__</a>
+        </div>
+    </section>
+
+    <section class="card history-card">
+        <h2>最近の配信傾向</h2>
+
+        <div class="history-list"></div>
+    </section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#eaf4ff;
+    color:#1e293b;
+    font-family:
+        "Hiragino Sans",
+        "Yu Gothic",
+        sans-serif;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:16px;
+}
+
+.header{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:20px;
+    padding:20px;
+    border-radius:24px;
+    background:#2563eb;
+    color:#fff;
+    box-shadow:
+        0 10px 30px rgba(37,99,235,.20);
+}
+
+.channel-icon{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid rgba(255,255,255,.3);
+}
+
+h1{
+    font-size:1.6rem;
+}
+
+.sub-title{
+    margin-top:4px;
+    font-size:.9rem;
+    color:rgba(255,255,255,.85);
+}
+
+.card{
+    background:#fff;
+    border-radius:24px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.08);
+}
+
+.forecast-card{
+    position:relative;
+    min-height:340px;
+    overflow:hidden;
+    background:
+        linear-gradient(
+            180deg,
+            #f8fbff 0%,
+            #ffffff 100%
+        );
+}
+
+.today-forecast{
+    text-align:center;
+}
+
+.weather-icon{
+    line-height:1;
+}
+
+.today-icon{
+    font-size:7rem;
+}
+
+.tomorrow-icon{
+    font-size:3rem;
+}
+
+.forecast-text{
+    margin-top:12px;
+    font-size:1rem;
+    color:#475569;
+}
+
+.forecast-percent{
+    margin-top:8px;
+    font-size:2.8rem;
+    font-weight:bold;
+    color:#0f172a;
+}
+
+.forecast-message{
+    margin-top:16px;
+    font-size:.85rem;
+    color:#64748b;
+}
+
+.tomorrow-forecast{
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    text-align:center;
+}
+
+.tomorrow-label{
+    margin-top:4px;
+    font-size:.9rem;
+    color:#64748b;
+}
+
+h2{
+    margin-bottom:12px;
+}
+
+.twitter-embed{
+    min-height:350px;
+    border:2px dashed #cbd5e1;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#64748b;
+}
+
+.history-item{
+    padding:12px 0;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.history-item:last-child{
+    border-bottom:none;
+}
+
+.history-title{
+    font-weight:bold;
+}
+
+.tag{
+    margin-top:4px;
+    color:#2563eb;
+    font-size:.9rem;
+}
+
+.history-date{
+    margin-top:4px;
+    color:#64748b;
+    font-size:.9rem;
+}
+
+@media(min-width:768px){
+
+    .today-icon{
+        font-size:10rem;
+    }
+
+    .tomorrow-icon{
+        font-size:4rem;
+    }
+
+}
