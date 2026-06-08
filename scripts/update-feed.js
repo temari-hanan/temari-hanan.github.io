@@ -7,26 +7,74 @@ async function main() {
         `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`
     );
 
+    if(!response.ok){
+        throw new Error(`HTTP ${response.status}`);
+    }
+
     const xml = await response.text();
 
-    const title = xml.match(/<title>(.*?)<\/title>/s)?.[1] ?? '';
-    const published = xml.match(/<published>(.*?)<\/published>/s)?.[1] ?? '';
+    const entries = [...xml.matchAll(
+        /<entry>([\s\S]*?)<\/entry>/g
+    )];
 
-    const thumbnail = xml.match(
-        /<media:thumbnail[^>]*url="([^"]+)"/
-    )?.[1] ?? '';
+    const videos = entries.map(match => {
+        const entry = match[1];
+
+        const videoId = entry.match(
+            /<yt:videoId>(.*?)<\/yt:videoId>/
+        )?.[1] ?? '';
+
+        const title = entry.match(
+            /<title>([\s\S]*?)<\/title>/
+        )?.[1] ?? '';
+
+        const published = entry.match(
+            /<published>(.*?)<\/published>/
+        )?.[1] ?? '';
+
+        const updated = entry.match(
+            /<updated>(.*?)<\/updated>/
+        )?.[1] ?? '';
+
+        const thumbnail = entry.match(
+            /<media:thumbnail[^>]*url="([^"]+)"/
+        )?.[1] ?? '';
+
+        const url = videoId
+            ? `https://www.youtube.com/watch?v=${videoId}`
+            : '';
+
+        return {
+            videoId,
+            title,
+            published,
+            updated,
+            thumbnail,
+            url
+        };
+    });
 
     const result = {
         updatedAt: new Date().toISOString(),
-        title,
-        published,
-        thumbnail
+        channelId: CHANNEL_ID,
+        count: videos.length,
+        videos
     };
+
+    fs.mkdirSync('data', {
+        recursive: true
+    });
 
     fs.writeFileSync(
         'data/latest.json',
-        JSON.stringify(result, null, 4)
+        JSON.stringify(result, null, 4),
+        'utf8'
     );
+
+    console.log(`videos: ${videos.length}`);
 }
 
-main();
+main().catch(error => {
+    console.error(error);
+    process.exit(1);
+});
