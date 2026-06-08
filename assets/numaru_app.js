@@ -16,8 +16,81 @@ const WEATHER_ICON = {
     rain: '\u{1F327}\uFE0F'
 };
 
-function getWeatherIcon(probability){
+// 初期表示時
+$(function(){
+    initializeForecast();
+});
 
+// 配信確率表示用のメイン関数
+function initializeForecast(){
+    const today = new Date();
+
+    const tomorrow = new Date();
+
+    tomorrow.setDate(
+        tomorrow.getDate() + 1
+    );
+
+    const todayForecast =
+        calculateForecastForDate(today);
+
+    const tomorrowForecast =
+        calculateForecastForDate(tomorrow);
+
+    renderForecast(
+        todayForecast,
+        tomorrowForecast
+    );
+}
+
+// 
+function calculateForecastForDate(date){
+    const probability =
+        calculateProbability(date);
+
+    return {
+        date,
+        probability,
+        weather:
+            getWeatherIcon(probability),
+        message:
+            '本日は夜に配信がある可能性が高そうです'
+    };
+}
+
+// 引数の日付における配信確率を計算して返す
+function calculateProbability(date){
+    const dateKey = formatDateKey(date);
+    const cacheKey = `forecast_${dateKey}`;
+    const cachedProbability = localStorage.getItem(cacheKey);
+
+    if(cachedProbability !== null){
+        return Number(
+            cachedProbability
+        );
+    }
+
+    const probability = calculateProbabilityCore(date);
+
+    localStorage.setItem(
+        cacheKey,
+        probability
+    );
+
+    return probability;
+}
+
+// 
+function calculateProbabilityCore(date){
+    const day = date.getDate();
+
+    return (
+        (day * 7) % 100
+    );
+}
+
+// 配信確率表示用の絵文字を返す
+function getWeatherIcon(probability){
     if(probability >= 100){
         return WEATHER_ICON.live;
     }
@@ -31,37 +104,31 @@ function getWeatherIcon(probability){
     }
 
     return WEATHER_ICON.rain;
-
 }
 
-function calculateForecast(targetDate){
+// new Date() から YYYY-MM-DD を返す
+function formatDateKey(date){
+    const year =
+        date.getFullYear();
 
-    return {
-        probability: 72,
-        message: '本日は夜に配信がある可能性が高そうです'
-    };
+    const month =
+        String(
+            date.getMonth() + 1
+        ).padStart(2, '0');
 
+    const day =
+        String(
+            date.getDate()
+        ).padStart(2, '0');
+
+    return `${year}-${month}-${day}`;
 }
 
-function renderForecast(){
-
-    const todayForecast =
-        document.querySelector('.today-forecast');
-
-    const tomorrowForecast =
-        document.querySelector('.tomorrow-forecast');
-
-    const today =
-        calculateForecast(new Date());
-
-    const tomorrow =
-        calculateForecast(
-            new Date(Date.now() + 86400000)
-        );
-
-    todayForecast.innerHTML = `
+// 描画用
+function renderForecast(todayForecast, tomorrowForecast){
+    $('.today-forecast').html(`
         <div class="weather-icon today-icon">
-            ${getWeatherIcon(today.probability)}
+            ${todayForecast.weather}
         </div>
 
         <div class="forecast-text">
@@ -69,89 +136,21 @@ function renderForecast(){
         </div>
 
         <div class="forecast-percent">
-            ${today.probability}%
+            ${todayForecast.probability}%
         </div>
 
         <div class="forecast-message">
-            ${today.message}
+            ${todayForecast.message}
         </div>
-    `;
+    `);
 
-    tomorrowForecast.innerHTML = `
+    $('.tomorrow-forecast').html(`
         <div class="weather-icon tomorrow-icon">
-            ${getWeatherIcon(tomorrow.probability)}
+            ${tomorrowForecast.weather}
         </div>
 
         <div class="tomorrow-label">
-            明日 ${tomorrow.probability}%
+            明日 ${tomorrowForecast.probability}%
         </div>
-    `;
-
+    `);
 }
-
-function renderHistory(){
-
-    const container =
-        document.querySelector('.history-list');
-
-    container.innerHTML = DUMMY_DATA.map(item => `
-        <div class="history-item">
-
-            <div class="history-title">
-                ${item.title}
-            </div>
-
-            <div class="tag">
-                ${item.tag}
-            </div>
-
-            <div class="history-date">
-                ${item.dayOfTheWeek}曜日
-            </div>
-
-        </div>
-    `).join('');
-
-}
-
-function loadForecast(){
-
-    const todayKey =
-        new Date().toISOString().slice(0, 10);
-
-    const cacheKey =
-        `forecast_${todayKey}`;
-
-    const cache =
-        localStorage.getItem(cacheKey);
-
-    if(cache){
-
-        console.log('cache hit');
-
-        return JSON.parse(cache);
-
-    }
-
-    const result = {
-        createdAt: Date.now()
-    };
-
-    localStorage.setItem(
-        cacheKey,
-        JSON.stringify(result)
-    );
-
-    return result;
-
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    loadForecast();
-
-    renderForecast();
-
-    renderHistory();
-
-});

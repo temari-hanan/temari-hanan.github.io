@@ -29,7 +29,7 @@ body{
     background:#2563eb;
     color:#fff;
     box-shadow:
-        0 10px 30px rgba(37,99,235,.20);
+        0 10px 30px rgba(37,99,235,.2);
 }
 
 .channel-icon{
@@ -60,19 +60,28 @@ h1{
 }
 
 .forecast-card{
-    position:relative;
     min-height:340px;
-    overflow:hidden;
-    background:
-        linear-gradient(
-            180deg,
-            #f8fbff 0%,
-            #ffffff 100%
-        );
+}
+
+.forecast-main{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    min-height:300px;
+}
+
+.forecast-left{
+    width:100%;
 }
 
 .today-forecast{
     text-align:center;
+}
+
+.tomorrow-forecast{
+    text-align:center;
+    justify-self:end;
+    padding-right:12px;
 }
 
 .weather-icon{
@@ -95,7 +104,7 @@ h1{
 
 .forecast-percent{
     margin-top:8px;
-    font-size:2.8rem;
+    font-size:3rem;
     font-weight:bold;
     color:#0f172a;
 }
@@ -104,23 +113,13 @@ h1{
     margin-top:16px;
     font-size:.85rem;
     color:#64748b;
-}
-
-.tomorrow-forecast{
-    position:absolute;
-    right:20px;
-    bottom:20px;
-    text-align:center;
+    max-width:260px;
 }
 
 .tomorrow-label{
     margin-top:4px;
     font-size:.9rem;
     color:#64748b;
-}
-
-h2{
-    margin-bottom:12px;
 }
 
 .twitter-embed{
@@ -130,7 +129,6 @@ h2{
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#64748b;
 }
 
 .history-item{
@@ -156,6 +154,32 @@ h2{
     margin-top:4px;
     color:#64748b;
     font-size:.9rem;
+}
+
+@media(max-width:767px){
+
+    .forecast-main{
+        min-height:260px;
+    }
+
+    .today-icon{
+        font-size:6rem;
+    }
+
+    .forecast-percent{
+        font-size:2.5rem;
+    }
+
+    .tomorrow-icon{
+        font-size:2.2rem;
+    }
+
+    .forecast-message{
+        max-width:180px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
 }
 
 @media(min-width:768px){
