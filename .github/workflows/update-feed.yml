@@ -21,14 +21,14 @@ jobs:
         with:
           node-version: 22
 
-      - run: node scripts/update-feed.js
+      - run: node assets/scripts/update-feed.js
 
       - name: Commit
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
 
-          git add data/latest.json
+          git add assets/numaru/latest.json
 
           git diff --cached --quiet || git commit -m "Update feed"
 

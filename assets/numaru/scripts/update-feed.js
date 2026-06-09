@@ -61,12 +61,12 @@ async function main() {
         videos
     };
 
-    fs.mkdirSync('data', {
+    fs.mkdirSync('assets/numaru', {
         recursive: true
     });
 
     fs.writeFileSync(
-        'data/latest.json',
+        'assets/numaru/latest.json',
         JSON.stringify(result, null, 4),
         'utf8'
     );
