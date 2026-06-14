@@ -1,8 +1,32 @@
 {
-    "updatedAt": "2026-06-09T12:30:55.600Z",
+    "updatedAt": "2026-06-14T05:24:57.946Z",
     "channelId": "UCeTk2xcCHeBDntLPKn06L9g",
     "count": 15,
     "videos": [
+        {
+            "videoId": "T6Vd7qrOk8Y",
+            "title": "【　朗読　】今日を生きているだけで/筆先ちひろ【　ぬぅまる　】",
+            "published": "2026-06-13T07:33:14+00:00",
+            "updated": "2026-06-13T07:35:29+00:00",
+            "thumbnail": "https://i1.ytimg.com/vi/T6Vd7qrOk8Y/hqdefault.jpg",
+            "url": "https://www.youtube.com/watch?v=T6Vd7qrOk8Y"
+        },
+        {
+            "videoId": "5xr_cocg_28",
+            "title": "【  メタファー #5  】神ゲーと噂のRPGやってみる！５ ※ネタバレ注意",
+            "published": "2026-06-12T11:16:44+00:00",
+            "updated": "2026-06-12T14:47:47+00:00",
+            "thumbnail": "https://i2.ytimg.com/vi/5xr_cocg_28/hqdefault.jpg",
+            "url": "https://www.youtube.com/watch?v=5xr_cocg_28"
+        },
+        {
+            "videoId": "rFFVaA7f-Mo",
+            "title": "【  メタファー #4  】神ゲーと噂のRPGやってみる！４ ※ネタバレ注意",
+            "published": "2026-06-11T11:53:51+00:00",
+            "updated": "2026-06-12T20:50:41+00:00",
+            "thumbnail": "https://i3.ytimg.com/vi/rFFVaA7f-Mo/hqdefault.jpg",
+            "url": "https://www.youtube.com/watch?v=rFFVaA7f-Mo"
+        },
         {
             "videoId": "8114JMW9B-k",
             "title": "【  メタファー #3  】神ゲーと噂のRPGやってみる！3 ※ネタバレ注意",
@@ -71,7 +95,7 @@
             "videoId": "BMYxSP_pzy4",
             "title": "【  スプラトゥーン3 】リッター上手くなりたい時期。",
             "published": "2026-05-12T10:28:51+00:00",
-            "updated": "2026-05-13T06:55:59+00:00",
+            "updated": "2026-06-11T17:34:06+00:00",
             "thumbnail": "https://i3.ytimg.com/vi/BMYxSP_pzy4/hqdefault.jpg",
             "url": "https://www.youtube.com/watch?v=BMYxSP_pzy4"
         },
@@ -79,7 +103,7 @@
             "videoId": "GdrhDbIlH_w",
             "title": "【  スプラトゥーン3 】まったりバンカラ～！ギアのかけら集めたい。",
             "published": "2026-05-10T12:53:58+00:00",
-            "updated": "2026-05-13T22:50:42+00:00",
+            "updated": "2026-06-09T15:43:58+00:00",
             "thumbnail": "https://i4.ytimg.com/vi/GdrhDbIlH_w/hqdefault.jpg",
             "url": "https://www.youtube.com/watch?v=GdrhDbIlH_w"
         },
@@ -87,7 +111,7 @@
             "videoId": "PGpInOdA9oQ",
             "title": "【  スプラトゥーン3 】キャラコンを鍛える会",
             "published": "2026-05-08T09:06:18+00:00",
-            "updated": "2026-05-09T09:34:08+00:00",
+            "updated": "2026-06-07T20:28:20+00:00",
             "thumbnail": "https://i1.ytimg.com/vi/PGpInOdA9oQ/hqdefault.jpg",
             "url": "https://www.youtube.com/watch?v=PGpInOdA9oQ"
         },
@@ -98,30 +122,6 @@
             "updated": "2026-06-06T19:16:26+00:00",
             "thumbnail": "https://i3.ytimg.com/vi/Fj1gYUbzMD8/hqdefault.jpg",
             "url": "https://www.youtube.com/watch?v=Fj1gYUbzMD8"
-        },
-        {
-            "videoId": "YpnVzgseYpY",
-            "title": "【  スプラトゥーン3 】定期的におもろ！ってなるゲーム",
-            "published": "2026-05-01T20:12:55+00:00",
-            "updated": "2026-06-02T10:31:28+00:00",
-            "thumbnail": "https://i2.ytimg.com/vi/YpnVzgseYpY/hqdefault.jpg",
-            "url": "https://www.youtube.com/watch?v=YpnVzgseYpY"
-        },
-        {
-            "videoId": "uL6PSKqu_3I",
-            "title": "【  SEKIRO / Steam版 】お米は大事と存じます。 ※ネタバレ注意",
-            "published": "2026-04-26T18:28:33+00:00",
-            "updated": "2026-05-26T16:03:42+00:00",
-            "thumbnail": "https://i2.ytimg.com/vi/uL6PSKqu_3I/hqdefault.jpg",
-            "url": "https://www.youtube.com/watch?v=uL6PSKqu_3I"
-        },
-        {
-            "videoId": "s6vu3dHhQv4",
-            "title": "【  SEKIRO / Steam版 】迷えば敗れる。※ネタバレ注意",
-            "published": "2026-04-23T21:37:11+00:00",
-            "updated": "2026-05-23T16:35:10+00:00",
-            "thumbnail": "https://i4.ytimg.com/vi/s6vu3dHhQv4/hqdefault.jpg",
-            "url": "https://www.youtube.com/watch?v=s6vu3dHhQv4"
         }
     ]
 }

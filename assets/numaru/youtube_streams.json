@@ -2784,6 +2784,14 @@
     "dayOfTheWeek": "金"
   },
   {
+    "title": "【  雑談  】ちょっぴり雑談でも",
+    "tag": "freetalk",
+    "scheduledStartTime": "2026-05-16T18:15:00+00:00",
+    "actualEndTime": "2026-05-16T18:15:00+00:00",
+    "publishedAt": "2026-05-16T18:15:00+00:00",
+    "dayOfTheWeek": "日"
+  },
+  {
     "title": "【  R.E.P.O.  】初心者レポ！かわいい衣装が欲しいっ！",
     "tag": "REPO",
     "scheduledStartTime": "2026-05-29T11:40:00Z",
@@ -2808,11 +2816,43 @@
     "dayOfTheWeek": "月"
   },
   {
+    "title": "【  メタファー #2  】神ゲーと噂のRPGやってみる！2 ※ネタバレ注意",
+    "tag": "Metaphor",
+    "scheduledStartTime": "2026-06-03T17:07:04+00:00",
+    "actualEndTime": "2026-06-03T17:07:04+00:00",
+    "publishedAt": "2026-06-03T17:07:04+00:00",
+    "dayOfTheWeek": "木"
+  },
+  {
     "title": "【  メタファー #3  】神ゲーと噂のRPGやってみる！3 ※ネタバレ注意",
     "tag": "Metaphor",
     "scheduledStartTime": "2026-06-04T04:45:00Z",
     "actualEndTime": "2026-06-04T08:47:59Z",
     "publishedAt": "2026-06-04T09:20:10Z",
     "dayOfTheWeek": "木"
+  },
+  {
+    "title": "【  メタファー #4  】神ゲーと噂のRPGやってみる！４ ※ネタバレ注意",
+    "tag": "Metaphor",
+    "scheduledStartTime": "2026-06-11T11:53:51+00:00",
+    "actualEndTime": "2026-06-11T11:53:51+00:00",
+    "publishedAt": "2026-06-11T11:53:51+00:00",
+    "dayOfTheWeek": "木"
+  },
+  {
+    "title": "【　朗読　】今日を生きているだけで/筆先ちひろ【　ぬぅまる　】",
+    "tag": "freetalk",
+    "scheduledStartTime": "2026-06-13T07:33:14+00:00",
+    "actualEndTime": "2026-06-13T07:33:14+00:00",
+    "publishedAt": "2026-06-13T07:33:14+00:00",
+    "dayOfTheWeek": "土"
+  },
+  {
+    "title": "【  メタファー #5  】神ゲーと噂のRPGやってみる！５ ※ネタバレ注意",
+    "tag": "Metaphor",
+    "scheduledStartTime": "2026-06-12T11:16:44+00:00",
+    "actualEndTime": "2026-06-12T11:16:44+00:00",
+    "publishedAt": "2026-06-12T11:16:44+00:00",
+    "dayOfTheWeek": "金"
   }
 ]
