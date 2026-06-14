@@ -69,10 +69,10 @@ const DAY_INDEX = { '日': 0, '月': 1, '火': 2, '水': 3, '木': 4, '金': 5, 
  */
 const FORECAST_TABLE = [
     //  threshold  icon（天気絵文字）     message（{day} は曜日名に置換）
-    { threshold: 80, icon: '\u26C8',  message: '{day}曜日は過去の傾向から配信が期待できます！' },
-    { threshold: 50, icon: '\u2601\uFE0F', message: '{day}曜日は配信があるかも。チェックしてみて！' },
-    { threshold: 20, icon: '\u{1F326}\uFE0F', message: '{day}曜日は配信はあまり多くない傾向です。' },
-    { threshold:  0, icon: '\u{1F327}\uFE0F', message: '{day}曜日は配信が少ない曜日です。' },
+    { threshold: 65, icon: '\u26A1',  message: '{day}曜日は過去の傾向から配信が期待できます！' },
+    { threshold: 40, icon: '\u2600\uFE0F', message: '{day}曜日は配信があるかも、ディスコードも要チェック！' },
+    { threshold: 20, icon: '\u2601\uFE0F', message: '{day}曜日は配信が少ない傾向です' },
+    { threshold:  0, icon: '\u{1F327}\uFE0F', message: '{day}曜日はアーカイブを見ましょう' },
 ];
 
 /**
@@ -86,14 +86,14 @@ const FORECAST_TABLE = [
  */
 const SCORE_WEIGHTS = {
     sameDayAndDate:    50,  // ①-a 同曜日かつ同日付（月/日）の配信が過去にある ← 最優先
-    sameDayOfWeek:     35,  // ①-b 同曜日に配信が多い（週ごとの出現率で比例加算）
-    sameDateOfMonth:   20,  // ①-c 同日付（月/日）の配信が過去にある
+    sameDayOfWeek:     25,  // ①-b 同曜日に配信が多い（週ごとの出現率で比例加算）
+    sameDateOfMonth:   15,  // ①-c 同日付（月/日）の配信が過去にある
     consecutiveHype:   25,  // ②-a 連続配信中かつ対象ゲームをプレイ中
     consecutive:       15,  // ②-b 連続配信中（ゲーム不問）
-    menstrualPenalty: -15,  // ③   生理と思われる日（24・25日）
+    menstrualPenalty: -10,  // ③   生理と思われる日（24・25日）
 };
 
-/** ①-d で対象とするゲームキーワード（タイトル or タグに部分一致） */
+/** ②-a で対象とするゲームキーワード（タイトル or タグに部分一致） */
 const HYPE_GAMES = ['スプラ', 'モンハン', 'エルデン', 'ナイトレイン', 'フロム'];
 
 /** ②-で生理と仮定している日付 */
