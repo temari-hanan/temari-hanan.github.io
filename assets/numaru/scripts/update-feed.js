@@ -1,3 +1,4 @@
+// memo: feedのURLは数日間404になることがちょいちょいある
 const fs = require('fs');
 
 const CHANNEL_ID = 'UCeTk2xcCHeBDntLPKn06L9g';
